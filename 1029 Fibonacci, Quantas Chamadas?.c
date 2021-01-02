@@ -1,10 +1,11 @@
+//Só funciona em C99 no URI, pois fala algo sobre não aceitar o for no início quando tenta compilar em C no URI
+
 #include <stdio.h> 
 #include <stdlib.h>
-#include <string.h>
 
 int contador;
 
- int fib(int v)
+int fib(int v)
 {
     contador++;
     if (v<2)
@@ -26,10 +27,10 @@ int main(int argc, char const *argv[])
     {
         scanf("%d", &a[i]);
     }
-    for (int i = 0; i < S; ++i)
+    for (int j = 0; j < S; ++j)
     {
-        res = fib(a[i]);
-        printf("fib(%d) = %d calls = %d\n", a[i],res, contador-1);
+        res = fib(a[j]);
+        printf("fib(%d) = %d calls = %d\n", a[j],res, contador-1);
         contador=0;
     }
     return 0;
